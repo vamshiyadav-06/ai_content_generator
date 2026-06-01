@@ -1,6 +1,2 @@
-fastapi
-uvicorn
-groq
-python-dotenv
-requests
 streamlit
+requests

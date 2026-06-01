@@ -9,6 +9,17 @@ load_dotenv()
 # Create FastAPI app
 app = FastAPI()
 
+
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Get API key from .env
 groq_api_key = os.getenv("GROQ_API_KEY")
 
